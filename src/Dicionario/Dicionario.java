@@ -5,21 +5,26 @@
  */
 
 package Dicionario;
+/**
+ *
+ * @author Geovanni Rocha
+ */
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class Dic{
+public class Dicionario implements IDicionario{
     
-    private static Dic dicionario = null;
+    private static Dicionario dicionario = null;
     
     private List<String> stopWordMap = null ;
     //HashMap<Integer, String> hashTemp;
     private Integer posicaoAtualHash;
     
-    public Dic(){
+    public Dicionario(){
         stopWordMap = new ArrayList<>();
         
         posicaoAtualHash = 0;
@@ -27,9 +32,9 @@ public class Dic{
         //hashTemp = new HashMap<>();
     }
     
-    static public Dic getDicionario(){
+    static public Dicionario getDicionario(){
         if(dicionario == null){
-            dicionario = new Dic();
+            dicionario = new Dicionario();
         }     
         return dicionario;
     }
@@ -37,6 +42,7 @@ public class Dic{
     //tolkenMap, é o mapa de tolken
     //stopWordMap, é o hashMap de StopWord
     
+    @Override
     public HashMap removeStopWord(HashMap<Integer, String> tolkenMap){
         Integer i , pos = 0;
         boolean finded;
@@ -53,6 +59,7 @@ public class Dic{
         return hashTemp;        
     }
     
+    @Override
     public boolean isStopWord(String word){
         Integer i = 0;
         boolean find = false;
@@ -65,17 +72,14 @@ public class Dic{
         return find;
     }
     
+    @Override
     public void addStopWord(String word){
       stopWordMap.add(word);
       
-    }
-    
-     public void addStopWord(int Ascii){
-      stopWordMap.add(String.copyValueOf(Character.toChars(Ascii)));
-         System.err.println(String.copyValueOf(Character.toChars(Ascii)));
-    }
+    } 
     
     
+    @Override
     public HashMap<Integer,String> sort(HashMap<Integer, String> tolkenMap){
         HashMap<Integer,String> tempHash = new HashMap<>();
         

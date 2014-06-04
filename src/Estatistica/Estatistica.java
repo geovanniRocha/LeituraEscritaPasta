@@ -8,6 +8,11 @@ package Estatistica;
 
 import java.util.HashMap;
 
+/**
+ *
+ * @author Geovanni Rocha
+ */
+
 public class Estatistica {
     
     static private Estatistica estatistica = null;

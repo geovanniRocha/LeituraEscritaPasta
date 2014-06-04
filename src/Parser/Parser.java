@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 
 /**
  *
- * @author Carlos
+ * @author Geovanni Rocha
  */
 public class Parser {
     private String texto;

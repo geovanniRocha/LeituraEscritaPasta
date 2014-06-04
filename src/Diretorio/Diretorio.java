@@ -18,6 +18,11 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 
+/**
+ *
+ * @author Geovanni Rocha
+ */
+
 public class Diretorio{
     
     private static Diretorio dir = null;
@@ -25,7 +30,7 @@ public class Diretorio{
     private Integer selecaoArquivo, Contador = 0;
     private HashMap<Integer, File> Indices;
     private String Texto, fileName;
-    PrintStream writer = null; 
+    private PrintStream writer = null; 
     
     private Diretorio(final File folder){        
         pasta = folder;

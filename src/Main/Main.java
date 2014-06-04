@@ -7,6 +7,7 @@
 
 package Main;
 
+import Dicionario.Dicionario;
 import Diretorio.Diretorio;
 import Indexador.Indexador;
 import Recuperador.Recuperador;
@@ -14,8 +15,9 @@ import java.util.HashMap;
 
 /**
  *
- * @author Carlos
+ * @author Geovanni Rocha
  */
+
 public class Main {
     
     public static void main(String[] args){
@@ -23,10 +25,10 @@ public class Main {
  
         Diretorio d = Diretorio.getDiretorio();
          
-        Dicionario.Dic dic = Dicionario.Dic.getDicionario();
+        Dicionario dic = Dicionario.getDicionario();
         
         Recuperador recuperador = Recuperador.getRecuperador();
-        dic.addStopWord("Aa");
+        dic.addStopWord("hUmAs");
         HashMap e;
         Indexador index = Indexador.getIndexador();
         index.index();
@@ -34,7 +36,7 @@ public class Main {
         e = d.pegaArqIndice();
         
         
-        recuperador.recuperar("HK416");
+        recuperador.recuperar("Humas");
         
         
         

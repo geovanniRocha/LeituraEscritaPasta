@@ -1,13 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package Recuperador;
 
 import Diretorio.Diretorio;
 import java.util.HashMap;
+
+/**
+ *
+ * @author Geovanni Rocha
+ */
 
 
 public class Recuperador {
@@ -36,7 +37,7 @@ public class Recuperador {
         if(hash.containsKey(termo)){
             System.out.println(" " + hash.get(termo));
             System.out.println(" " + termo);
-            System.out.println(" In file: " + d.getCorrentFileName());
+            //System.out.println(" In file: " + d.getCorrentFileName());
         }
         return "Correto";
         

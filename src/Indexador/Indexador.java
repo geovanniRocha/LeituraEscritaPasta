@@ -6,12 +6,17 @@
 
 package Indexador;
 
-import Dicionario.Dic;
+import Dicionario.Dicionario;
 import Diretorio.Diretorio;
 import Estatistica.Estatistica;
 import Parser.Parser;
 import java.io.File;
 import java.util.HashMap;
+
+/**
+ *
+ * @author Geovanni Rocha
+ */
 
 
 public class Indexador {
@@ -34,7 +39,7 @@ public class Indexador {
         Parser p = new Parser();
         
         
-        Dic dic = Dic.getDicionario();
+        Dicionario dic = Dicionario.getDicionario();
         Estatistica est =Estatistica.getEstatistica();
         String texto;
         HashMap termos;
