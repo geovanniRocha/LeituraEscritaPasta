@@ -48,5 +48,8 @@ public class Estatistica {
         
         return freqMap;
     }
+   
+    
+    public 
     
 }
