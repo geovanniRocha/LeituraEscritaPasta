@@ -24,7 +24,7 @@ public class Diretorio{
     final private File pasta;
     private Integer selecaoArquivo, Contador = 0;
     private HashMap<Integer, File> Indices;
-    private String Texto;
+    private String Texto, fileName;
     PrintStream writer = null; 
     
     private Diretorio(final File folder){        
@@ -98,7 +98,7 @@ public class Diretorio{
         String temp = "";
         try{
             BufferedReader bf = new BufferedReader(new FileReader(Indices.get(Contador).getPath()));
-
+            fileName = Indices.get(Contador).getPath();
             while(bf.ready()){            
                 temp =  bf.readLine();
                 //System.out.println(temp);
@@ -185,7 +185,9 @@ public class Diretorio{
         return caminhos;  
     }
     
-    
+    public String getCorrentFileName(){
+    return fileName;
+    }
     
         
 }

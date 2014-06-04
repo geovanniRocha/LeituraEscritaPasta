@@ -21,7 +21,6 @@ public class Dic{
     
     public Dic(){
         stopWordMap = new ArrayList<>();
-
         
         posicaoAtualHash = 0;
        
@@ -69,6 +68,11 @@ public class Dic{
     public void addStopWord(String word){
       stopWordMap.add(word);
       
+    }
+    
+     public void addStopWord(int Ascii){
+      stopWordMap.add(String.copyValueOf(Character.toChars(Ascii)));
+         System.err.println(String.copyValueOf(Character.toChars(Ascii)));
     }
     
     

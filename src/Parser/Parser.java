@@ -36,15 +36,16 @@ public class Parser {
         return v;
     }    
     
-    public HashMap<Integer, String> Split(String s, String delimitador){
+    public HashMap<String, Integer> Split(String s, String delimitador){
         
         Integer quantidadeTolken = 0;
-        HashMap<Integer, String> v = new HashMap<>();
+        HashMap<String, Integer> v = new HashMap<>();
         StringTokenizer stt = new StringTokenizer(s,delimitador);
 
             while (stt.hasMoreTokens()){
                 String token = stt.nextToken();
-                v.put(quantidadeTolken, token);
+                String token1 = stt.nextToken();
+                v.put(token, Integer.parseInt(token1));
                 quantidadeTolken++;
                 
             }

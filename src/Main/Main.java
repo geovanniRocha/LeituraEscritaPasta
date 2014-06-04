@@ -9,6 +9,7 @@ package Main;
 
 import Diretorio.Diretorio;
 import Indexador.Indexador;
+import Recuperador.Recuperador;
 import java.util.HashMap;
 
 /**
@@ -23,14 +24,17 @@ public class Main {
         Diretorio d = Diretorio.getDiretorio();
          
         Dicionario.Dic dic = Dicionario.Dic.getDicionario();
+        
+        Recuperador recuperador = Recuperador.getRecuperador();
+        dic.addStopWord("Aa");
         HashMap e;
         Indexador index = Indexador.getIndexador();
         index.index();
         
         e = d.pegaArqIndice();
         
-        for(int i =0;i < e.size(); i+=2)
-            System.out.println(e.get(i) + " - " + e.get(i+1));
+        
+        recuperador.recuperar("BB");
         
         
         
