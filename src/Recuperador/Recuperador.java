@@ -2,7 +2,9 @@
 
 package Recuperador;
 
+import Dicionario.Dicionario;
 import Diretorio.Diretorio;
+import Estatistica.Estatistica;
 import java.util.HashMap;
 
 /**
@@ -29,14 +31,17 @@ public class Recuperador {
     public String recuperar(String termo){
         Diretorio d = Diretorio.getDiretorio();
         HashMap hash = d.pegaArqIndice();
-        Integer i = 0;
-//        while(hash.get(i) != termo){
-//          i++;
-//        }
-//        
+        double i = 0;
+        Dicionario dic = Dicionario.getDicionario();
+        hash = dic.sort(hash);
+        Estatistica es = Estatistica.getEstatistica();
+        hash = es.contarFrequencia(hash);
+        
+        i = log()/log(2);
         if(hash.containsKey(termo)){
             System.out.println(" " + hash.get(termo));
             System.out.println(" " + termo);
+            System.out.println("Indice de Frequencia do termo: " + );
             //System.out.println(" In file: " + d.getCorrentFileName());
         }
         return "Correto";

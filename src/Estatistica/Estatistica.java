@@ -32,7 +32,7 @@ public class Estatistica {
     public HashMap<String, Integer> contarFrequencia(HashMap<Integer, String> tolkenMap){
         HashMap<String, Integer> freqMap = new HashMap<>();
         //HashMap<Integer, HashMap> indices = new HashMap<>();
-        Integer i = 0, c, f =0;
+        Integer i = 0, c;
         String x;
         while(i < tolkenMap.size()){
             x = tolkenMap.get(i);
@@ -50,6 +50,5 @@ public class Estatistica {
     }
    
     
-    public 
     
 }

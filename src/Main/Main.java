@@ -12,6 +12,7 @@ import Diretorio.Diretorio;
 import Indexador.Indexador;
 import Recuperador.Recuperador;
 import java.util.HashMap;
+import Usuario.Usuario;
 
 /**
  *
@@ -28,7 +29,8 @@ public class Main {
         Dicionario dic = Dicionario.getDicionario();
         
         Recuperador recuperador = Recuperador.getRecuperador();
-        dic.addStopWord("hUmAs");
+        Usuario usuario = new Usuario();
+        dic.addStopWord("HH");
         HashMap e;
         Indexador index = Indexador.getIndexador();
         index.index();
@@ -36,7 +38,7 @@ public class Main {
         e = d.pegaArqIndice();
         
         
-        recuperador.recuperar("Humas");
+        usuario.recuperar("AA");
         
         
         
